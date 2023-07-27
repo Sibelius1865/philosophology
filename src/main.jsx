@@ -6,10 +6,11 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <App />
+    {/* <BrowserRouter>
       <Routes>
         <Route path=':lang' element={<App />}></Route>
       </Routes>  
-    </BrowserRouter>
+    </BrowserRouter> */}
   </React.StrictMode>,
 )

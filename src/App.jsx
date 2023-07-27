@@ -5,8 +5,8 @@ import Title from './Title';
 import Content from './Content';
 
 const App = () => {
-  const {lang} = useParams();
-  console.log(lang)
+  // const {lang} = useParams();
+  // console.log(lang)
   return (
     <div className="App">
       <Title />
