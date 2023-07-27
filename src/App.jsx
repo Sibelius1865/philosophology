@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import Title from './Title';
 import Content from './Content';
 
