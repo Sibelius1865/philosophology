@@ -20,7 +20,7 @@
 
 .content {
   width: 100vw;
-  height: 400vh;
+  height: calc(300vh - 180px);
 }
 
 .unit-1 {
@@ -47,7 +47,7 @@
   flex-direction: row;
   .section {
     position: sticky;
-    border: 1px solid black;
+    // border: 1px solid black;
     /* height: 100vh; */
     &:nth-of-type(1) {
       top: 70px;
