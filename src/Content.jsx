@@ -10,7 +10,7 @@ const Section = ({theme, children}) => (
 )
 
 const ContentBody = () => (
-  <div>
+  <div className='content-body'>
     <div className="unit-1">
       <Section theme='What is PHILOSOPHOLOGY?'>
       PHILOSOPHOLOGY is the logic of the concept of Philosophy. The term is used for the relativisation of a variety of philosophies and the pursuit of her essence. 
@@ -28,7 +28,7 @@ const ContentBody = () => (
       PHILOSOPHOLOGY is the logic of the concept of Philosophy. The term stands for the relativisation of a variety of philosophies and the pursuit of her essence. 
       </Section>
     </div>
-    <div className="unit-2">
+    {/* <div className="unit-2">
       <Section theme='What is PHILOSOPHOLOGY?'>
         PHILOSOPHOLOGY is the logic of the concept of Philosophy. The term is used for the relativisation of a variety of philosophies and the pursuit of her essence. 
       </Section>
@@ -38,14 +38,14 @@ const ContentBody = () => (
       <Section theme='What is PHILOSOPHOLOGY?'>
         PHILOSOPHOLOGY is the logic of the concept of Philosophy. The term stands for the relativisation of a variety of philosophies and the pursuit of her essence. 
       </Section>
-    </div>
+    </div> */}
   </div>
 )
 
-const Content = () => {
+const Content = (props) => {
   return (
     <div className='content'>
-      <SideMenu />
+      <SideMenu {...props} />
       <ContentBody />
     </div>
   )
