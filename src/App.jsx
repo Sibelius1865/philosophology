@@ -12,6 +12,21 @@ const Background = ({scrollPosition}) => (
   </div>
 )
 
+const Theme = ({scrollPosition}) => (
+  <div className={`plap ${scrollPosition <= window.innerHeight/2 ? ' ' : ' is-visible'}`}>
+    <h2>__PL-AP__</h2>
+  </div>
+)
+
+const SwitchLang = ({scrollPosition}) => {
+  const langsList = ['en', 'ja'];
+  return (
+    <div className={`switch-langs ${scrollPosition <= window.innerHeight/2 ? ' ' : ' is-visible'}`}>
+      {langsList.map(l => <div className='langs'>{l}</div>)}
+    </div>
+  )
+}
+
 const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
@@ -26,10 +41,11 @@ const App = () => {
   // console.log(lang)
   return (
     <div className="App">
-      <Background scrollPosition={scrollPosition} />
+      <Theme scrollPosition={scrollPosition} />
       <Title />
       <Content scrollPosition={scrollPosition} />
-      {/* <SwitchLang /> */}
+      <Background scrollPosition={scrollPosition} />
+      <SwitchLang scrollPosition={scrollPosition} />
     </div>
   )
 }

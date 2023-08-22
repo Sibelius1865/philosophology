@@ -10,7 +10,7 @@ const SideMenu = ({scrollPosition}) => {
         <li><a>community</a></li>
         <li><a>links</a></li>
       </ul>
-      <p>phslaphs</p>
+      {/* <p>__PL-AP__</p> */}
     </div>
   )
 }

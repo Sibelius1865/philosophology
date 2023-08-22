@@ -4,7 +4,7 @@ const Title = () => {
   return (
     <div className='area'>
       <div className='title'>
-        Society for PHILOSOPHOLOGY and APHILOSOPHY
+        Online Community for PHILOSOPHOLOGY and APHILOSOPHY
       </div>
     </div>
   )
