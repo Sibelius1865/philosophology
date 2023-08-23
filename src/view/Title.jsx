@@ -1,4 +1,4 @@
-import enso from './assets/enso.jpg';
+import enso from '@/assets/enso.jpg';
 
 const Title = () => {
   return (

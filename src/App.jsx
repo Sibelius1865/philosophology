@@ -1,40 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
-import './App.scss';
-import Title from './Title';
-import SideMenu from './SideMenu';
-import Content from './Content';
-import enso from './assets/enso.jpg';
-
-const Background = ({scrollPosition}) => (
-  <div className='background'>
-    <img src={enso} style={{opacity: Math.max(0.2, (1 - scrollPosition/window.innerHeight))}} />
-    {/* <img src={enso} /> */}
-  </div>
-)
-
-const Theme = () => (
-  <div className='plap'>
-    <h2>__PL-AP__</h2>
-  </div>
-)
-
-const SwitchLang = () => {
-  const langsList = ['en', 'ja'];
-  return (
-    <div className='switch-langs'>
-      {langsList.map(l => <div className='langs'>{l}</div>)}
-    </div>
-  )
-}
-
-const FadeInContainer = ({children, scrollPosition}) => {
-  return (
-    <div className={`fade-in ${scrollPosition <= window.innerHeight/2 ? ' ' : ' is-visible'}`}>
-      {children}
-    </div>
-  )
-}
+import '@/App.scss';
+import Home from '@/pages/Home';
+import Introduction from '@/pages/Introduction';
 
 
 const App = () => {
@@ -47,18 +15,14 @@ const App = () => {
     PositionUp();
     return () => window.removeEventListener("scroll", PositionUp);
   }, []);
-  // const {lang} = useParams();
-  // console.log(lang)
+
   return (
     <div className="App">
-      <Title />
-      <FadeInContainer scrollPosition={scrollPosition}>
-        <Theme />
-        <SwitchLang />
-        <SideMenu />
-      </FadeInContainer>
-      <Content scrollPosition={scrollPosition} />
-      <Background scrollPosition={scrollPosition} />
+      <Routes>
+        <Route path='' element={<Home />}></Route>
+        <Route path='home' element={<Home />}></Route>
+        <Route path='introduction' element={<Introduction />}></Route>
+      </Routes>
     </div>
   )
 }

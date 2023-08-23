@@ -1,5 +1,3 @@
-import SideMenu from './SideMenu';
-
 const Section = ({theme, children}) => (
   <div className="section"> 
     <div className="theme">{theme}</div>
