@@ -45,7 +45,7 @@ const ContentBody = () => (
 const Content = (props) => {
   return (
     <div className='content'>
-      <SideMenu {...props} />
+      {/* <SideMenu {...props} /> */}
       <ContentBody />
     </div>
   )

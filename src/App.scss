@@ -34,46 +34,33 @@
     opacity: 1;
   }
 }
-.plap {
-  position: fixed;
-  left: 30px;
-  bottom: 20px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-.switch-langs {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-  display: flex;
-  flex-direction: row;
-  .langs {
-    padding: 5px;
-  }
-}
-.is-visible {
-  visibility: visible;
-  opacity: 1;
-  transition: 0.5s;
-}
 
-.content {
-  position: relative;
-  width: 100vw;
-  height: calc(300vh - 180px);
+
+.fade-in {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  .plap {
+    position: fixed;
+    left: 30px;
+    bottom: 20px;
+  }
+  .switch-langs {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    .langs {
+      padding: 5px;
+    }
+  }
   .side-menu {
     position: fixed;
     top: 70px;
     width: 100px;
     height: calc(100vh - 70px);
     text-align: left;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
     ul {
       list-style-type: none;
       li {
@@ -89,11 +76,17 @@
       bottom: 10px;
     }
   }
-  .is-visible {
-    visibility: visible;
-    opacity: 1;
-    transition: 0.5s;
-  }
+}
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.content {
+  position: relative;
+  width: 100vw;
+  height: calc(300vh - 180px);
   .content-body {
     position: absolute;
     left: 100px;

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
 import './App.scss';
 import Title from './Title';
+import SideMenu from './SideMenu';
 import Content from './Content';
 import enso from './assets/enso.jpg';
 
@@ -12,20 +13,29 @@ const Background = ({scrollPosition}) => (
   </div>
 )
 
-const Theme = ({scrollPosition}) => (
-  <div className={`plap ${scrollPosition <= window.innerHeight/2 ? ' ' : ' is-visible'}`}>
+const Theme = () => (
+  <div className='plap'>
     <h2>__PL-AP__</h2>
   </div>
 )
 
-const SwitchLang = ({scrollPosition}) => {
+const SwitchLang = () => {
   const langsList = ['en', 'ja'];
   return (
-    <div className={`switch-langs ${scrollPosition <= window.innerHeight/2 ? ' ' : ' is-visible'}`}>
+    <div className='switch-langs'>
       {langsList.map(l => <div className='langs'>{l}</div>)}
     </div>
   )
 }
+
+const FadeInContainer = ({children, scrollPosition}) => {
+  return (
+    <div className={`fade-in ${scrollPosition <= window.innerHeight/2 ? ' ' : ' is-visible'}`}>
+      {children}
+    </div>
+  )
+}
+
 
 const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -41,11 +51,14 @@ const App = () => {
   // console.log(lang)
   return (
     <div className="App">
-      <Theme scrollPosition={scrollPosition} />
       <Title />
+      <FadeInContainer scrollPosition={scrollPosition}>
+        <Theme />
+        <SwitchLang />
+        <SideMenu />
+      </FadeInContainer>
       <Content scrollPosition={scrollPosition} />
       <Background scrollPosition={scrollPosition} />
-      <SwitchLang scrollPosition={scrollPosition} />
     </div>
   )
 }
