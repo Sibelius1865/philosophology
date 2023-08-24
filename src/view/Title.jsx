@@ -1,13 +1,11 @@
-import enso from '@/assets/enso.jpg';
+import '@/App.scss';
 
-const Title = () => {
-  return (
-    <div className='area'>
-      <div className='title'>
-        Online Community for PHILOSOPHOLOGY and APHILOSOPHY
-      </div>
+const Title = () => (
+  <div className='area'>
+    <div className='title'>
+      Online Community for PHILOSOPHOLOGY and APHILOSOPHY
     </div>
-  )
-}
+  </div>
+)
 
 export default Title

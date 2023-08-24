@@ -28,6 +28,12 @@
     font-size: 20px;
   }
 }
+.header {
+  position: fixed;
+  left: 80px;
+  padding: 20px;
+  font-size: 20px;
+}
 .background {
   z-index: 1;
   img {
@@ -38,48 +44,50 @@
     opacity: 1;
   }
 }
+.plap {
+  position: fixed;
+  left: 30px;
+  bottom: 20px;
+}
+.switch-langs {
+  position: fixed;
+  top: 10px;
+  right: 50px;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  .langs {
+    padding: 5px;
+  }
+}
+.side-menu {
+  position: fixed;
+  top: 70px;
+  width: 100px;
+  height: calc(100vh - 70px);
+  text-align: left;
+  z-index: 100;
+  ul {
+    list-style-type: none;
+    li {
+      padding: 10px;
+      a {
+        color: black;
+      }
+    }
+  }
+  p {
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+  }
+}
 
 .fade-in {
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
   z-index: 10;
-  .plap {
-    position: fixed;
-    left: 30px;
-    bottom: 20px;
-  }
-  .switch-langs {
-    position: fixed;
-    top: 10px;
-    right: 50px;
-    display: flex;
-    flex-direction: row;
-    .langs {
-      padding: 5px;
-    }
-  }
-  .side-menu {
-    position: fixed;
-    top: 70px;
-    width: 100px;
-    height: calc(100vh - 70px);
-    text-align: left;
-    ul {
-      list-style-type: none;
-      li {
-        padding: 10px;
-        a {
-          color: black;
-        }
-      }
-    }
-    p {
-      position: absolute;
-      left: 50px;
-      bottom: 10px;
-    }
-  }
 }
 .is-visible {
   visibility: visible;

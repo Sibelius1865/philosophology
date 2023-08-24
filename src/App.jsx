@@ -3,6 +3,7 @@ import { Routes, Route, useParams } from 'react-router-dom';
 import '@/App.scss';
 import Home from '@/pages/Home';
 import Introduction from '@/pages/Introduction';
+import NotFound from '@/pages/NotFound';
 
 
 const App = () => {
@@ -20,8 +21,9 @@ const App = () => {
     <div className="App">
       <Routes>
         <Route path='' element={<Home />}></Route>
-        <Route path='home' element={<Home />}></Route>
-        <Route path='introduction' element={<Introduction />}></Route>
+        <Route path='home/:lang?' element={<Home />}></Route>
+        <Route path='introduction/:lang?' element={<Introduction />}></Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   )
